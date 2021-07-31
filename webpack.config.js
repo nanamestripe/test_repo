@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { loader } = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/javascripts/main.js', //エントリーポイント => ./src/javascripts/内に変更 + main.jsに変更
@@ -20,6 +21,20 @@ module.exports = {
           },
           {
             loader: 'css-loader',
+          },
+        ],
+      },
+      {
+        test: /\.(png|jpg)/,
+        use: [
+          {
+            // loader: 'url-loader',
+            loader: 'file-loader',
+            options: {
+              esModule: false,
+              //以下file-loaderのオプション
+              name: 'images/[name].[ext]',
+            },
           },
         ],
       },
