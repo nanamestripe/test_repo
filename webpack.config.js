@@ -25,6 +25,7 @@ module.exports = {
         ],
       },
       {
+        //Asset Modulesを使う際の記述
         test: /\.(png|jpg)/,
         type: 'asset/resource',
         generator: {
@@ -43,6 +44,21 @@ module.exports = {
           //},
         ],
       },
+      {
+        test: /\.pug/,
+        use: [
+          {
+            loader: 'html-loader',
+          },
+          {
+            loader: 'pug-html-loader',
+            options: {
+              //prettyをつけることでHTMLが整形される
+              pretty: true,
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
@@ -52,8 +68,16 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       //srcフォルダ内にHTMLファイルの雛形を作り、ここから読ませる + src配下のtemplatesフォルダに入れる
-      template: './src/templates/index.html',
+      // template: './src/templates/index.html',
+      //srcフォルダ内をpugファイルに変更
+      template: './src/templates/index.pug',
+      filename: 'index.html',
     }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/access.pug',
+      filename: 'access.html',
+    }),
+
     new CleanWebpackPlugin(),
   ],
 };
