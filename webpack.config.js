@@ -13,7 +13,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css/, //testはファイル名(.css)を検知
+        test: /\.(css|sass|scss)/, //testはファイル名(.css)を検知
         use: [
           {
             // loader: 'style-loader',
@@ -21,6 +21,9 @@ module.exports = {
           },
           {
             loader: 'css-loader',
+          },
+          {
+            loader: 'sass-loader',
           },
         ],
       },
@@ -77,7 +80,15 @@ module.exports = {
       template: './src/templates/access.pug',
       filename: 'access.html',
     }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/members/taro.pug',
+      filename: 'members/taro.html',
+    }),
 
     new CleanWebpackPlugin(),
   ],
+  //webpack-dev-server ポート番号変更 https://bit.ly/3Caxfbp
+  devServer: {
+    port: 3000, // ポート番号
+  },
 };

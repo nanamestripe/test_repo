@@ -7,4 +7,4 @@ console.log('Webpack!');
 my();
 
 //srcからCSSの読み込み(※ここで読み込まないとloaderの意味がない)
-import '../stylesheets/main.css';
+import '../stylesheets/main.scss';

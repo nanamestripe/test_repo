@@ -35,3 +35,40 @@ Run `npm audit` for details.
 
 1. [Iteration](https://pugjs.org/language/iteration.html)
 2. [Conditionals](https://pugjs.org/language/conditionals.html)
+
+# Autoprefixer
+
+https://ics.media/entry/17376/#postcss-autoprefixer
+
+# npm audit の結果
+
+# npm audit report
+
+glob-parent <5.1.2
+Severity: moderate
+Regular expression denial of service - https://npmjs.com/advisories/1751
+fix available via `npm audit fix --force`
+Will install webpack-dev-server@1.16.5, which is a breaking change
+node_modules/glob-parent
+chokidar 1.0.0-rc1 - 2.1.8
+Depends on vulnerable versions of glob-parent
+node_modules/chokidar
+webpack-dev-server 2.0.0-beta - 3.11.2
+Depends on vulnerable versions of chokidar
+node_modules/webpack-dev-server
+
+pug <3.0.1
+Severity: high
+Remote Code Execution - https://npmjs.com/advisories/1643
+fix available via `npm audit fix --force`
+Will install pug-html-loader@1.0.0, which is a breaking change
+node_modules/pug
+pug-html-loader >=1.0.1
+Depends on vulnerable versions of pug
+node_modules/pug-html-loader
+
+5 vulnerabilities (3 moderate, 2 high)
+
+すべての差分を確認するには
+git diff
+(d キーで続きを見る)

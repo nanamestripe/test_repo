@@ -10,13 +10,13 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/stylesheets/main.css":
-/*!**********************************!*\
-  !*** ./src/stylesheets/main.css ***!
-  \**********************************/
+/***/ "./src/stylesheets/main.scss":
+/*!***********************************!*\
+  !*** ./src/stylesheets/main.scss ***!
+  \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://webpack/./src/stylesheets/main.css?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://webpack/./src/stylesheets/main.scss?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _my_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./my.js */ \"./src/javascripts/my.js\");\n/* harmony import */ var _stylesheets_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../stylesheets/main.css */ \"./src/stylesheets/main.css\");\n//my.jsの読み込みの定義 + modules配下の記述だったので、並列の記述に変更する\n\n\nconsole.log('Webpack!');\n\n//my.jsの実行\n(0,_my_js__WEBPACK_IMPORTED_MODULE_0__.default)();\n\n//srcからCSSの読み込み(※ここで読み込まないとloaderの意味がない)\n\n\n\n//# sourceURL=webpack://webpack/./src/javascripts/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _my_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./my.js */ \"./src/javascripts/my.js\");\n/* harmony import */ var _stylesheets_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../stylesheets/main.scss */ \"./src/stylesheets/main.scss\");\n//my.jsの読み込みの定義 + modules配下の記述だったので、並列の記述に変更する\n\n\nconsole.log('Webpack!');\n\n//my.jsの実行\n(0,_my_js__WEBPACK_IMPORTED_MODULE_0__.default)();\n\n//srcからCSSの読み込み(※ここで読み込まないとloaderの意味がない)\n\n\n\n//# sourceURL=webpack://webpack/./src/javascripts/main.js?");
 
 /***/ }),
 

@@ -1,0 +1,33 @@
+$primary-color: #133840;
+
+@use "footer" as footer;
+//Dart sass
+//https://haniwaman.com/dart-sass/
+
+@mixin set-margin($direction, $value) {
+  margin-#{$direction}: $value;
+}
+
+body {
+  color: lightblue;
+  background-color: $primary-color;
+}
+
+.content {
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 24px;
+    color: $primary-color;
+  }
+  .title-lg {
+    @extend .title;
+    font-size: 32px;
+  }
+  @include set-margin(right, 16px);
+}
+
+a {
+  color: #eeeeee;
+  text-decoration: none;
+}
