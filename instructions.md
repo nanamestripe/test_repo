@@ -71,4 +71,5 @@ node_modules/pug-html-loader
 
 すべての差分を確認するには
 git diff
-(d キーで続きを見る)
+続きを見る=>(d キー)
+終了する =>(q キー)
