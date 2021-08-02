@@ -73,3 +73,5 @@ node_modules/pug-html-loader
 git diff
 続きを見る=>(d キー)
 終了する =>(q キー)
+
+webpack.config.js を記述し直した場合、一度 webpack dev server を停止(Control + C)してから立ち上げし直すこと
