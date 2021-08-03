@@ -75,3 +75,18 @@ git diff
 終了する =>(q キー)
 
 webpack.config.js を記述し直した場合、一度 webpack dev server を停止(Control + C)してから立ち上げし直すこと
+
+# カーソル移動
+
+Control ＋ F
+カーソルを右に移動
+Control ＋ B
+カーソルを左に移動
+Control ＋ P
+カーソルを上に移動
+Control ＋ N
+カーソルを下に移動
+Control ＋ A
+カーソルを行頭に移動
+Control ＋ E
+カーソルを行末に移動

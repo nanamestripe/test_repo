@@ -5,10 +5,15 @@ import './reactApp.jsx';
 import Vue from 'vue';
 import VueApp from './VueApp.vue';
 
+//ts
+import add from './add.ts';
+
 new Vue({
   el: '#vue-root',
   render: h => h(VueApp),
 });
+
+console.log(add(3, 9));
 
 //my.jsの読み込みの定義 + modules配下の記述だったので、並列の記述に変更する
 import my from './my.js';
