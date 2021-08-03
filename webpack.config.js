@@ -14,6 +14,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: './javascripts/main.js', //defaultは 'main.js' + ./javascripts/とすることでフォルダ内に出力される
+    publicPath: '/', //Section17 80「CSSスタイルの調整」
   },
   module: {
     rules: [

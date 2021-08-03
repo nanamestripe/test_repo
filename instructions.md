@@ -90,3 +90,7 @@ Control ＋ A
 カーソルを行頭に移動
 Control ＋ E
 カーソルを行末に移動
+
+# Visual Studio Code でファイル名の検索
+
+Command + p
