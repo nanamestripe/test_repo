@@ -13,7 +13,7 @@ module.exports = {
   entry: './src/javascripts/main.js', //エントリーポイント => ./src/javascripts/内に変更 + main.jsに変更
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: './javascripts/[name]-[contenthash].js', //main.jsの代わりに[]-[contenthash].jsとすることでファイル名を強制的にキャッシュすることができる。
+    filename: './javascripts/[name]-[contenthash].js', //main.jsの代わりに[name]-[contenthash].jsとすることでファイル名を強制的にキャッシュすることができる。
     //defaultは 'main.js' + ./javascripts/とすることでフォルダ内に出力される
     publicPath: '/', //Section17 80「CSSスタイルの調整」
   },
