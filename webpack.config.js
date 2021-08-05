@@ -13,7 +13,7 @@ module.exports = {
   entry: './src/javascripts/main.js', //エントリーポイント => ./src/javascripts/内に変更 + main.jsに変更
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: './javascripts/[]-[contenthash].js', //main.jsの代わりに[]-[contenthash].jsとすることでファイル名を強制的にキャッシュ
+    filename: './javascripts/[name]-[contenthash].js', //main.jsの代わりに[]-[contenthash].jsとすることでファイル名を強制的にキャッシュすることができる。
     //defaultは 'main.js' + ./javascripts/とすることでフォルダ内に出力される
     publicPath: '/', //Section17 80「CSSスタイルの調整」
   },
@@ -75,7 +75,7 @@ module.exports = {
         test: /\.(png|jpg)/,
         type: 'asset/resource',
         generator: {
-          filename: 'images/[name]-[contenthash][ext]',
+          filename: 'images/[name]-[contenthash][ext]', //[name]の代わりに[name]-[contenthash]とすることでファイル名を強制的にキャッシュすることができる。
         },
         use: [
           //{
@@ -115,7 +115,7 @@ module.exports = {
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
       //srcと同じ名前のCSSファイルがdistに出力される(src内のmy.cssにあわせる=> main.css)
-      filename: './stylesheets/[name]-[contenthash].css',
+      filename: './stylesheets/[name]-[contenthash].css', //[name]の代わりに[name]-[contenthash].jsとすることでファイル名を強制的にキャッシュすることができる。
     }),
     new HtmlWebpackPlugin({
       //srcフォルダ内にHTMLファイルの雛形を作り、ここから読ませる + src配下のtemplatesフォルダに入れる
